@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Site Primeiros Socorros</title>
+    <title>Manuais | Primeiros Socorros</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif;}
@@ -16,27 +16,22 @@
             width: 100%; padding: 18px 5%;
             background: rgba(8, 14, 32, 0.9);
             border-bottom: 1px solid #121C33;
-            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
         }
-        h1 {font-family: 'Orbitron', sans-serif; font-size: 28px; color: #FF4D4D; margin-bottom: 4px;}
-        header p {font-size: 15px; color: #A0A8C0;}
+        .botao-voltar {
+            position: absolute; left: 5%;
+            color: #FF4D4D; font-size: 22px; text-decoration: none;
+        }
+        h1 {font-family: 'Orbitron', sans-serif; font-size: 24px; color: #FF4D4D;}
+        main {padding: 25px 5% 90px 5%;}
         .aviso {
             background: rgba(255, 77, 77, 0.1); border: 1px solid #FF4D4D;
-            border-radius: 10px; padding: 14px; margin: 20px 5%;
+            border-radius: 10px; padding: 14px; margin-bottom: 20px;
             text-align: center; font-weight: 500; color: #FF8080;
         }
-        main {padding: 0 5% 90px 5%;}
-        h2 {font-size: 20px; margin: 25px 0 15px; color: #4D94FF;}
-        .grade {display: grid; grid-template-columns: 1fr 1fr; gap: 12px;}
-        .card {
-            background: rgba(11, 20, 40, 0.8); border: 1px solid #121C33;
-            border-radius: 12px; padding: 16px; text-align: center;
-            text-decoration: none; color: inherit; transition: 0.2s;
-        }
-        .card:active {transform: scale(0.97); background: #0F1A33;}
-        .icone-card {font-size: 32px; margin-bottom: 8px;}
-        .card h4 {font-size: 16px; margin-bottom: 4px;}
-        .card p {font-size: 13px; color: #A0A8C0;}
         nav {
             position: fixed; bottom: 0; left: 0; width: 100%;
             background: rgba(8, 14, 32, 0.95); border-top: 1px solid #121C33;
@@ -51,8 +46,8 @@
 <body>
 
 <header>
-    <h1>🚑 PRIMEIROS SOCORROS</h1>
-    <p>Orientações seguras e materiais completos</p>
+    <a href="index.html" class="botao-voltar">←</a>
+    <h1>📚 MANUAIS</h1>
 </header>
 
 <div class="aviso">
@@ -60,47 +55,16 @@
 </div>
 
 <main>
-    <h2>ACESSO RÁPIDO</h2>
-    <div class="grade">
-        <a href="#" class="card">
-            <div class="icone-card">📚</div>
-            <h4>MANUAIS</h4>
-            <p>Livros e guias completos</p>
-        </a>
-        <a href="#" class="card">
-            <div class="icone-card">🎥</div>
-            <h4>VÍDEOS</h4>
-            <p>Passo a passo visual</p>
-        </a>
-        <a href="#" class="card">
-            <div class="icone-card">🩹</div>
-            <h4>EQUIPAMENTOS</h4>
-            <p>EPIs e itens essenciais</p>
-        </a>
-        <a href="#" class="card">
-            <div class="icone-card">🏷️</div>
-            <h4>PRODUTOS</h4>
-            <p>Fabricantes e orientações</p>
-        </a>
-        <a href="#" class="card">
-            <div class="icone-card">📖</div>
-            <h4>ORIENTAÇÕES</h4>
-            <p>O que fazer em cada caso</p>
-        </a>
-        <a href="#" class="card">
-            <div class="icone-card">✅</div>
-            <h4>CHECKLISTS</h4>
-            <p>Montar e revisar kits</p>
-        </a>
-    </div>
+    <h2>Conteúdo em construção</h2>
+    <p>Aqui você vai adicionar os livros, guias e materiais de primeiros socorros.</p>
 </main>
 
 <nav>
-    <a href="index.html" class="nav-item ativo">
+    <a href="index.html" class="nav-item">
         <div class="icone">🏠</div>
         INÍCIO
     </a>
-    <a href="#" class="nav-item">
+    <a href="#" class="nav-item ativo">
         <div class="icone">📚</div>
         GUIAS
     </a>
