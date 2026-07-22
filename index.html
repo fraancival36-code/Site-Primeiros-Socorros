@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Primeiros Socorros — Centro de Orientações</title>
+    <title>Primeiros Socorros — Andrômeda</title>
     <meta name="apple-mobile-web-app-title" content="Primeiros Socorros">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="theme-color" content="#FF4D4D">
@@ -22,58 +22,61 @@
             z-index: -1;
         }
         header {
-            width: 100%; padding: 12px 5%; /* Reduzi o espaço do topo */
-            background: rgba(8,14,32,0.9);
+            width: 100%; padding: 10px 5%;
+            background: rgba(8,14,24,0.9);
             border-bottom: 1px solid #121C33;
             display: flex; align-items: center; justify-content: center;
             position: relative;
         }
-        header h1 {font-family: 'Orbitron', sans-serif; font-size: 22px; color: #FF4D4D;} /* Fonte menor */
-        header p {font-size: 13px; color: #A0A9B8; margin-top: 2px;} /* Fonte menor */
-        main {padding: 15px 5% 80px 5%; /* Menos espaço entre seções */}
+        header h1 {font-family: 'Orbitron', sans-serif; font-size: 20px; color: #FF4D4D;}
+        header p {font-size: 11px; color: #A0A9B8; margin-top: 2px;}
+        header .autor {font-size: 10px; color: #707DA0; margin-top: 1px; font-weight: 500;}
+        main {padding: 12px 5% 75px 5%;}
         .aviso {
             background: rgba(255,77,77,0.1); border: 1px solid #FF4D4D;
-            border-radius: 1rem; padding: 12px; margin-bottom: 1rem;
-            text-align: center; font-weight: 600; color: #FF8080; font-size: 0.95rem;
+            border-radius: 1rem; padding: 10px; margin-bottom: 1rem;
+            text-align: center; font-weight: 600; color: #FF8080; font-size: 0.9rem;
         }
         .painel {
             display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
         }
         .item-painel {
             background: rgba(74,158,255,0.08); border: 1px solid rgba(0,204,255,0.2);
-            border-radius: 0.8rem; padding: 10px; text-align: center;
+            border-radius: 0.8rem; padding: 8px; text-align: center;
         }
-        .item-painel .numero {font-family: 'Orbitron', sans-serif; font-size: 18px; font-weight: 900; color: #FF4D4D;}
-        .item-painel .texto {font-size: 11px; color: #A0A9B8; margin-top: 2px;}
-        h2 {font-family: 'Orbitron', sans-serif; font-size: 18px; color: #4D94FF; margin-bottom: 1rem;}
+        .item-painel .numero {font-family: 'Orbitron', sans-serif; font-size: 16px; font-weight: 900; color: #FF4D4D;}
+        .item-painel .texto {font-size: 10px; color: #A0A9B8; margin-top: 2px;}
+        h2 {font-family: 'Orbitron', sans-serif; font-size: 17px; color: #4D94FF; margin-bottom: 0.8rem;}
         .grid-modulos {
             display: grid; grid-template-columns: repeat(2, 1fr); 
-            gap: 0.8rem; /* Espaço menor entre os botões */
-            margin-bottom: 1.5rem;
+            gap: 0.7rem;
+            margin-bottom: 1.2rem;
         }
         .modulo {
             background: rgba(74,158,255,0.08); border: 1px solid rgba(0,204,255,0.2);
-            border-radius: 1rem; padding: 1rem 0.8rem; /* Menos espaço dentro do botão */
+            border-radius: 1rem; padding: 0.8rem 0.6rem;
             text-align: center;
-            text-decoration: none !important; color: inherit !important; transition: all 0.3s ease;
-            min-height: 120px; /* Tamanho igual para todos */
+            text-decoration: none !important; color: inherit !important;
+            transition: all 0.3s ease;
+            min-height: 110px;
             display: flex; flex-direction: column; justify-content: center;
+            overflow: hidden;
         }
         .modulo:active {transform: scale(0.97); background: rgba(74,158,255,0.15);}
-        .modulo .icon {font-size: 2.2rem; margin-bottom: 0.5rem; display: block;} /* Ícone menor */
-        .modulo .icon-img {width: 3.2rem; height: 3.2rem; margin: 0 auto 0.5rem; display: block; border-radius: 0.5rem;} /* Imagens menores */
-        .modulo .titulo {font-family: 'Orbitron', sans-serif; font-size: 1rem; font-weight: 700; margin-bottom: 0.2rem; text-transform: uppercase;}
-        .modulo .quantidade {font-size: 0.8rem; color: #FFD700; margin-left: 3px;}
-        .modulo .descricao {font-size: 0.8rem; color: #A0A9B8; margin-top: 0.1rem; line-height: 1.2;} /* Texto menor e mais compacto */
+        .modulo .icon {font-size: 2rem; margin-bottom: 0.4rem; display: block;}
+        .modulo .icon-img {width: 2.8rem; height: 2.8rem; margin: 0 auto 0.4rem; display: block; border-radius: 0.5rem;}
+        .modulo .titulo {font-family: 'Orbitron', sans-serif; font-size: 0.95rem; font-weight: 700; margin-bottom: 0.15rem; text-transform: uppercase; white-space: nowrap;}
+        .modulo .quantidade {font-size: 0.75rem; color: #FFD700; margin-left: 2px;}
+        .modulo .descricao {font-size: 0.78rem; color: #A0A9B8; margin-top: 0; line-height: 1.1;}
         nav.nav-bottom {
             position: fixed; bottom: 0; left: 0; width: 100%;
-            background: rgba(8,14,32,0.95); border-top: 1px solid #121C33;
-            display: flex; justify-content: space-around; padding: 8px 0 12px; z-index: 10; /* Rodapé mais compacto */
+            background: rgba(8,14,24,0.95); border-top: 1px solid #121C33;
+            display: flex; justify-content: space-around; padding: 6px 0 10px; z-index: 10;
         }
         .nav-item {text-align: center; color: #607090; text-decoration: none !important; font-size: 10px;}
         .nav-item.active {color: #FF4D4D;}
-        .nav-item .icon {display: block; font-size: 20px; margin-bottom: 2px;}
+        .nav-item .icon {display: block; font-size: 18px; margin-bottom: 2px;}
     </style>
 </head>
 <body>
@@ -83,7 +86,8 @@
         <div style="width:50px;"></div>
         <div style="text-align:center; flex:1;">
             <h1>🚑 PRIMEIROS SOCORROS</h1>
-            <p>Centro de Orientações e Materiais</p>
+            <p>Centro de Orientações — Plataforma Andrômeda</p>
+            <div class="autor">Autor: Francival Alves Farias</div>
         </div>
         <div style="width:50px;"></div>
     </header>
@@ -97,11 +101,11 @@
         <div class="painel">
             <div class="item-painel"><div class="numero">0</div><div class="texto">Guias prontos</div></div>
             <div class="item-painel"><div class="numero">0</div><div class="texto">Vídeos</div></div>
-            <div class="item-painel"><div class="numero">0</div><div class="texto">Itens cadastrados</div></div>
+            <div class="item-painel"><div class="numero">0</div><div class="texto">Materiais</div></div>
             <div class="item-painel"><div class="numero">0</div><div class="texto">Checklists</div></div>
         </div>
         
-        <h2>ACESSO RÁPIDO</h2>
+        <h2>⚡ ACESSO RÁPIDO</h2>
         <div class="grid-modulos">
             <a href="manuais.html" class="modulo">
                 <span class="icon">📚</span>
@@ -116,12 +120,12 @@
             <a href="equipamentos.html" class="modulo">
                 <span class="icon">🩹</span>
                 <div class="titulo">EQUIPAMENTOS <span class="quantidade">(0)</span></div>
-                <p class="descricao">Materiais</p>
+                <p class="descricao">Materiais necessários</p>
             </a>
             <a href="produtos.html" class="modulo">
                 <span class="icon">🏷️</span>
                 <div class="titulo">PRODUTOS <span class="quantidade">(0)</span></div>
-                <p class="descricao">Orientações</p>
+                <p class="descricao">Orientações de uso</p>
             </a>
             <a href="orientacoes.html" class="modulo">
                 <span class="icon">📖</span>
@@ -148,7 +152,7 @@
                 <p class="descricao">Reanimação</p>
             </div>
             <a href="queda.html" class="modulo">
-                <!-- Quando usar a imagem: <img src="queda.png" alt="Queda" class="icon-img"> -->
+                <!-- Quando adicionar a imagem: <img src="queda.png" alt="Queda" class="icon-img"> -->
                 <span class="icon">🧍💥</span>
                 <div class="titulo">QUEDA</div>
                 <p class="descricao">Escada, chão, altura</p>
@@ -176,17 +180,17 @@
             <div class="modulo">
                 <span class="icon">⚡</span>
                 <div class="titulo">CHOQUE</div>
-                <p class="descricao">Elétrico</p>
+                <p class="descricao">Elétrico / Térmico</p>
             </div>
             <div class="modulo">
                 <span class="icon">☣️</span>
                 <div class="titulo">INTOXICAÇÃO</div>
-                <p class="descricao">Remédios/alimentos</p>
+                <p class="descricao">Remédios / Alimentos</p>
             </div>
             <div class="modulo">
                 <span class="icon">🐍</span>
                 <div class="titulo">ANIMAIS</div>
-                <p class="descricao">Picadas</p>
+                <p class="descricao">Picadas / Mordidas</p>
             </div>
             <a href="transito.html" class="modulo">
                 <span class="icon">🚗🏍️</span>
@@ -196,7 +200,7 @@
             <div class="modulo">
                 <span class="icon">📞</span>
                 <div class="titulo">TELEFONES</div>
-                <p class="descricao">SAMU/Bombeiros</p>
+                <p class="descricao">SAMU / Bombeiros</p>
             </div>
             <a href="missao.html" class="modulo">
                 <span class="icon">❤️📖</span>
