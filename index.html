@@ -22,49 +22,58 @@
             z-index: -1;
         }
         header {
-            width: 100%; padding: 18px 5%;
+            width: 100%; padding: 12px 5%; /* Reduzi o espaço do topo */
             background: rgba(8,14,32,0.9);
             border-bottom: 1px solid #121C33;
             display: flex; align-items: center; justify-content: center;
             position: relative;
         }
-        header h1 {font-family: 'Orbitron', sans-serif; font-size: 26px; color: #FF4D4D;}
-        header p {font-size: 15px; color: #A0A9B8; margin-top: 2px;}
-        main {padding: 25px 5% 90px 5%;}
+        header h1 {font-family: 'Orbitron', sans-serif; font-size: 22px; color: #FF4D4D;} /* Fonte menor */
+        header p {font-size: 13px; color: #A0A9B8; margin-top: 2px;} /* Fonte menor */
+        main {padding: 15px 5% 80px 5%; /* Menos espaço entre seções */}
         .aviso {
             background: rgba(255,77,77,0.1); border: 1px solid #FF4D4D;
-            border-radius: 1rem; padding: 16px; margin-bottom: 1.5rem;
-            text-align: center; font-weight: 600; color: #FF8080;
+            border-radius: 1rem; padding: 12px; margin-bottom: 1rem;
+            text-align: center; font-weight: 600; color: #FF8080; font-size: 0.95rem;
         }
         .painel {
-            display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;
-            margin-bottom: 2rem;
+            display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px;
+            margin-bottom: 1.5rem;
         }
         .item-painel {
             background: rgba(74,158,255,0.08); border: 1px solid rgba(0,204,255,0.2);
-            border-radius: 0.8rem; padding: 12px; text-align: center;
+            border-radius: 0.8rem; padding: 10px; text-align: center;
         }
-        .item-painel .numero {font-family: 'Orbitron', sans-serif; font-size: 22px; font-weight: 900; color: #FF4D4D;}
-        .item-painel .texto {font-size: 12px; color: #A0A9B8; margin-top: 2px;}
-        h2 {font-family: 'Orbitron', sans-serif; font-size: 22px; color: #4D94FF; margin-bottom: 1.5rem;}
-        .grid-modulos {display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem;}
+        .item-painel .numero {font-family: 'Orbitron', sans-serif; font-size: 18px; font-weight: 900; color: #FF4D4D;}
+        .item-painel .texto {font-size: 11px; color: #A0A9B8; margin-top: 2px;}
+        h2 {font-family: 'Orbitron', sans-serif; font-size: 18px; color: #4D94FF; margin-bottom: 1rem;}
+        .grid-modulos {
+            display: grid; grid-template-columns: repeat(2, 1fr); 
+            gap: 0.8rem; /* Espaço menor entre os botões */
+            margin-bottom: 1.5rem;
+        }
         .modulo {
             background: rgba(74,158,255,0.08); border: 1px solid rgba(0,204,255,0.2);
-            border-radius: 1rem; padding: 1.5rem 1rem; text-align: center;
+            border-radius: 1rem; padding: 1rem 0.8rem; /* Menos espaço dentro do botão */
+            text-align: center;
             text-decoration: none !important; color: inherit !important; transition: all 0.3s ease;
+            min-height: 120px; /* Tamanho igual para todos */
+            display: flex; flex-direction: column; justify-content: center;
         }
         .modulo:active {transform: scale(0.97); background: rgba(74,158,255,0.15);}
-        .modulo .icon {font-size: 2.5rem; margin-bottom: 0.8rem; display: block;}
-        .modulo .titulo {font-family: 'Orbitron', sans-serif; font-size: 1rem; font-weight: 700; margin-bottom: 0.3rem;}
-        .modulo .descricao {font-size: 0.85rem; color: #A0A9B8;}
+        .modulo .icon {font-size: 2.2rem; margin-bottom: 0.5rem; display: block;} /* Ícone menor */
+        .modulo .icon-img {width: 3.2rem; height: 3.2rem; margin: 0 auto 0.5rem; display: block; border-radius: 0.5rem;} /* Imagens menores */
+        .modulo .titulo {font-family: 'Orbitron', sans-serif; font-size: 1rem; font-weight: 700; margin-bottom: 0.2rem; text-transform: uppercase;}
+        .modulo .quantidade {font-size: 0.8rem; color: #FFD700; margin-left: 3px;}
+        .modulo .descricao {font-size: 0.8rem; color: #A0A9B8; margin-top: 0.1rem; line-height: 1.2;} /* Texto menor e mais compacto */
         nav.nav-bottom {
             position: fixed; bottom: 0; left: 0; width: 100%;
             background: rgba(8,14,32,0.95); border-top: 1px solid #121C33;
-            display: flex; justify-content: space-around; padding: 10px 0 16px; z-index: 10;
+            display: flex; justify-content: space-around; padding: 8px 0 12px; z-index: 10; /* Rodapé mais compacto */
         }
-        .nav-item {text-align: center; color: #607090; text-decoration: none !important; font-size: 11px;}
+        .nav-item {text-align: center; color: #607090; text-decoration: none !important; font-size: 10px;}
         .nav-item.active {color: #FF4D4D;}
-        .nav-item .icon {display: block; font-size: 22px; margin-bottom: 3px;}
+        .nav-item .icon {display: block; font-size: 20px; margin-bottom: 2px;}
     </style>
 </head>
 <body>
@@ -81,7 +90,7 @@
     
     <main>
         <div class="aviso">
-            ⚠️ EM CASO DE EMERGÊNCIA GRAVE, LIGUE 192!
+            🚨 EM CASO DE EMERGÊNCIA, LIGUE 192 (SAMU)!
         </div>
 
         <h2>📊 VISÃO GERAL</h2>
@@ -96,33 +105,103 @@
         <div class="grid-modulos">
             <a href="manuais.html" class="modulo">
                 <span class="icon">📚</span>
-                <div class="titulo">MANUAIS</div>
+                <div class="titulo">MANUAIS <span class="quantidade">(0)</span></div>
                 <p class="descricao">Guias completos</p>
             </a>
             <a href="videos.html" class="modulo">
                 <span class="icon">🎥</span>
-                <div class="titulo">VÍDEOS</div>
+                <div class="titulo">VÍDEOS <span class="quantidade">(0)</span></div>
                 <p class="descricao">Passo a passo</p>
             </a>
             <a href="equipamentos.html" class="modulo">
                 <span class="icon">🩹</span>
-                <div class="titulo">EQUIPAMENTOS</div>
+                <div class="titulo">EQUIPAMENTOS <span class="quantidade">(0)</span></div>
                 <p class="descricao">Materiais</p>
             </a>
             <a href="produtos.html" class="modulo">
                 <span class="icon">🏷️</span>
-                <div class="titulo">PRODUTOS</div>
+                <div class="titulo">PRODUTOS <span class="quantidade">(0)</span></div>
                 <p class="descricao">Orientações</p>
             </a>
             <a href="orientacoes.html" class="modulo">
                 <span class="icon">📖</span>
-                <div class="titulo">ORIENTAÇÕES</div>
+                <div class="titulo">ORIENTAÇÕES <span class="quantidade">(0)</span></div>
                 <p class="descricao">Procedimentos</p>
             </a>
             <a href="checklists.html" class="modulo">
                 <span class="icon">✅</span>
-                <div class="titulo">CHECKLISTS</div>
+                <div class="titulo">CHECKLISTS <span class="quantidade">(0)</span></div>
                 <p class="descricao">Preparação</p>
+            </a>
+        </div>
+
+        <h2>🚨 EMERGÊNCIAS COMUNS</h2>
+        <div class="grid-modulos">
+            <div class="modulo">
+                <span class="icon">❤️</span>
+                <div class="titulo">COMUNS</div>
+                <p class="descricao">Principais casos</p>
+            </div>
+            <div class="modulo">
+                <span class="icon">🫀</span>
+                <div class="titulo">RCP</div>
+                <p class="descricao">Reanimação</p>
+            </div>
+            <a href="queda.html" class="modulo">
+                <!-- Quando usar a imagem: <img src="queda.png" alt="Queda" class="icon-img"> -->
+                <span class="icon">🧍💥</span>
+                <div class="titulo">QUEDA</div>
+                <p class="descricao">Escada, chão, altura</p>
+            </a>
+            <div class="modulo">
+                <span class="icon">🤏</span>
+                <div class="titulo">ENGASGO</div>
+                <p class="descricao">Desobstrução / Heimlich</p>
+            </div>
+            <div class="modulo">
+                <span class="icon">🔥</span>
+                <div class="titulo">QUEIMADURAS</div>
+                <p class="descricao">Tratamento</p>
+            </div>
+            <div class="modulo">
+                <span class="icon">🩸</span>
+                <div class="titulo">HEMORRAGIAS</div>
+                <p class="descricao">Estancar sangue</p>
+            </div>
+            <div class="modulo">
+                <span class="icon">🦴</span>
+                <div class="titulo">FRATURAS</div>
+                <p class="descricao">Imobilizar</p>
+            </div>
+            <div class="modulo">
+                <span class="icon">⚡</span>
+                <div class="titulo">CHOQUE</div>
+                <p class="descricao">Elétrico</p>
+            </div>
+            <div class="modulo">
+                <span class="icon">☣️</span>
+                <div class="titulo">INTOXICAÇÃO</div>
+                <p class="descricao">Remédios/alimentos</p>
+            </div>
+            <div class="modulo">
+                <span class="icon">🐍</span>
+                <div class="titulo">ANIMAIS</div>
+                <p class="descricao">Picadas</p>
+            </div>
+            <a href="transito.html" class="modulo">
+                <span class="icon">🚗🏍️</span>
+                <div class="titulo">TRÂNSITO</div>
+                <p class="descricao">Acidentes veiculares</p>
+            </a>
+            <div class="modulo">
+                <span class="icon">📞</span>
+                <div class="titulo">TELEFONES</div>
+                <p class="descricao">SAMU/Bombeiros</p>
+            </div>
+            <a href="missao.html" class="modulo">
+                <span class="icon">❤️📖</span>
+                <div class="titulo">MISSÃO</div>
+                <p class="descricao">Sobre este projeto</p>
             </a>
         </div>
     </main>
